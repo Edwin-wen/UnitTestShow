@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>失败案例汇总</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        success: '#00B42A',
+                        warning: '#FF7D00',
+                        danger: '#F53F3F',
+                        neutral: {
+                            100: '#F2F3F5',
+                            200: '#E5E6EB',
+                            300: '#C9CDD4',
+                            400: '#86909C',
+                            500: '#4E5969',
+                            600: '#272E3B',
+                            700: '#1D2129',
+                        }
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-inter text-neutral-700 min-h-screen flex flex-col">
+    <!-- 顶部导航栏 -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fa fa-exclamation-triangle text-danger text-2xl mr-3"></i>
+                    <h1 class="text-xl font-semibold text-neutral-700">GTest 失败案例汇总</h1>
+                </div>
+                <div class="flex items-center">
+                    <a href="index.html" class="text-neutral-500 hover:text-primary transition-colors">
+                        <i class="fa fa-arrow-left mr-1"></i> 返回索引
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mb-8">
+            <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-neutral-700 mb-2">失败案例汇总</h2>
+            <p class="text-neutral-500">共发现 1 个失败案例，分布在 1 个测试套件中</p>
+        </div>
+
+        
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-neutral-700 mb-3 flex items-center">
+                    <i class="fa fa-cubes text-danger mr-2"></i>
+                    FailTest
+                    <span class="ml-2 text-sm bg-danger/10 text-danger px-2 py-0.5 rounded-full">
+                        1 个失败
+                    </span>
+                </h3>
+                <div class="space-y-4">
+        
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden border-l-4 border-danger">
+                        <div class="p-4">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-medium text-neutral-800"><a href="sample_test.html#FailTest.sample3" class="hover:underline text-primary">sample3</a></h4>
+                                <span class="text-xs text-neutral-500">耗时: 0.177s</span>
+                            </div>
+                            <div class="mb-3 text-sm">
+                                <span class="font-medium text-neutral-600">错误类型:</span>
+                                <span class="text-danger"></span>
+                            </div>
+                            <div class="mb-3 text-sm">
+                                <span class="font-medium text-neutral-600">错误信息:</span>
+                                <span>sample_main.cpp:51
+Expected equality of these values:
+  var1
+    Which is: 4
+  var2
+    Which is: 1
+</span>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded text-xs text-neutral-700 max-h-40 overflow-y-auto">
+                                <pre class="whitespace-pre-wrap">sample_main.cpp:51
+Expected equality of these values:
+  var1
+    Which is: 4
+  var2
+    Which is: 1</pre>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-white border-t border-gray-200 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm text-neutral-500">
+                © 2025 测试结果报告 | 使用 <a href="https://github.com/google/googletest" target="_blank" class="text-primary hover:underline">Google Test</a> 框架生成
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // 添加页面加载动画
+        document.addEventListener('DOMContentLoaded', function() {
+            const failureBlocks = document.querySelectorAll('.border-danger');
+            failureBlocks.forEach((block, index) => {
+                setTimeout(() => {
+                    block.style.opacity = '1';
+                    block.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+</html>

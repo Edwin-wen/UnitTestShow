@@ -1,0 +1,3 @@
+[submodule "gtest2html"]
+	path = gtest2html
+	url = https://github.com/adarmalik/gtest2html.git

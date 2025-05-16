@@ -1,0 +1,13 @@
+  <testsuite name="FailTest" tests="6" failures="1" disabled="0" skipped="0" errors="0" time="1.766" timestamp="2025-05-15T01:29:34.245">
+    <testcase name="sample1" file="sample_main.cpp" line="15" status="run" result="completed" time="0.365" timestamp="2025-05-15T01:29:34.245" classname="sampleTest" />
+    <testcase name="sample2" file="sample_main.cpp" line="29" status="run" result="completed" time="0.723" timestamp="2025-05-15T01:29:34.611" classname="sampleTest" />
+    <testcase name="sample3" file="sample_main.cpp" line="43" status="run" result="completed" time="0.177" timestamp="2025-05-15T01:29:35.334" classname="sampleTest">
+      <failure message="sample_main.cpp:51&#x0A;Expected equality of these values:&#x0A;  var1&#x0A;    Which is: 4&#x0A;  var2&#x0A;    Which is: 1&#x0A;" type=""><![CDATA[sample_main.cpp:51
+Expected equality of these values:
+  var1
+    Which is: 4
+  var2
+    Which is: 1
+]]></failure>
+    </testcase>
+  </testsuite>

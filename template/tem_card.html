@@ -1,0 +1,43 @@
+<div class="report-card">
+    <div class="p-5">
+        <div class="flex justify-between items-start mb-4">
+            <h3 class="text-lg font-semibold text-neutral-700">{{suite_name}}</h3>
+            <span class="status-badge bg-{{status_color}}-100 text-{{status_color}}-800">
+                <i class="fa fa-{{status_icon}} mr-1"></i> {{status_text}}
+            </span>
+        </div>
+
+        <div class="space-y-3 mb-4">
+            <div class="flex justify-between">
+                <span class="text-sm text-neutral-500">测试总数</span>
+                <span class="font-medium">{{tests}}</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="text-sm text-neutral-500">失败数量</span>
+                <span class="font-medium text-{{status_color}}">{{failures}}</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="text-sm text-neutral-500">错误数量</span>
+                <span class="font-medium text-warning">{{errors}}</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="text-sm text-neutral-500">总耗时</span>
+                <span class="font-medium">{{time}}</span>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <div class="flex justify-between text-xs mb-1">
+                <span>通过率</span>
+                <span class="font-medium">{{pass_rate}}</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-{{status_color}} h-2 rounded-full" style="width: {{pass_rate if pass_rate != '未知' else '0'}}"></div>
+            </div>
+        </div>
+
+        <a href="{{html_file}}" class="block w-full bg-primary hover:bg-primary/90 text-white text-center py-2 px-4 rounded-md transition-colors duration-300">
+            查看详情 <i class="fa fa-arrow-right ml-1"></i>
+        </a>
+    </div>
+</div>

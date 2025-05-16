@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" failures="0" disabled="0" errors="0" time="1.345" timestamp="2025-05-14T01:02:45.898" name="AllTests">
+  <testsuite name="OtherTest" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="1.257" timestamp="2025-05-14T01:02:45.898">
+    <testcase name="other_test" file="Other_main.cpp" line="1132" status="run" result="completed" time="1.257" timestamp="2025-05-14T01:02:45.898" classname="OtherTest" />
+  </testsuite>
+</testsuites>
