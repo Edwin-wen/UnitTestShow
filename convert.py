@@ -39,8 +39,9 @@ def main():
     failures_template_path = template_dir / "tem_failpage.html"
 
     try:
-        shutil.rmtree(html_dir)  # 递归删除目录
-        print(f"成功删除目录: {html_dir}")
+        if html_dir.is_dir():
+            shutil.rmtree(html_dir)  # 递归删除目录
+            print(f"成功删除目录: {html_dir}")
     except OSError as e:
         print(f"错误: {e}")
 
